@@ -1,0 +1,136 @@
+.hero__container {
+  display: flex;
+  padding: 0;
+  max-width: 100%;
+  @include tablet {
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 720px;
+  }
+  @include desktop {
+    max-width: 1200px;
+  }
+}
+
+.soc {
+  width: 100px;
+  display: none;
+  align-items: flex-end;
+  padding-bottom: 40px;
+  padding-left: 27px;
+  @include tablet {
+    display: flex;
+  }
+}
+
+.soc__list {
+  transform: rotate(-90deg) translateY(100%);
+  transform-origin: bottom left;
+  @extend %list;
+  gap: 40px;
+  &::before {
+    content: '';
+    width: 60px;
+    height: 1px;
+    background-color: #303030;
+  }
+}
+
+.hero__wrap {
+  background-color: #3d3e45;
+  background-image: var(--gradient), url(../img/hero-bg-mob.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  // padding: 272px 100px 208px 100px;
+  padding: 208px 31px;
+  flex-grow: 1;
+  @include retina {
+    background-image: var(--gradient), url(../img/hero-bg-mob-2x.jpeg);
+  }
+  @include tablet {
+    padding: 272px 100px 237px 100px;
+    background-image: var(--gradient), url(../img/hero-bg-tab.jpeg);
+    @include retina {
+      background-image: var(--gradient), url(../img/hero-bg-tab-2x.jpeg);
+    }
+  }
+  @include desktop {
+    padding: 272px 100px 208px 100px;
+    background-image: var(--gradient), url(../img/hero-bg.jpeg);
+    @include retina {
+      background-image: var(--gradient), url(../img/hero-bg-2x.jpeg);
+    }
+  }
+}
+
+.soc__link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: #303030;
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.hero__pre-title {
+  color: rgba(157, 164, 189, 0.6);
+  margin-bottom: 20px;
+}
+.hero__title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  // font-size: 72px;
+  // line-height: calc(85 / 72);
+  font-size: 40px;
+  line-height: calc(56 / 48);
+  letter-spacing: 0.05em;
+  color: var(--main-title-color);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: baseline;
+  @include mobile {
+    font-size: 48px;
+  }
+  @include desktop {
+    font-size: 72px;
+    line-height: calc(85 / 72);
+  }
+}
+// &:hover::before {
+//   color: aqua;
+//   background-image: url(../img/barbers-img-2.jpeg);
+// }
+
+// &::before {
+//   content: '\1F602';
+//   font-size: 32px;
+//   background-image: url(../img/abot-img-2.jpeg);
+//   background-size: cover;
+//   background-position: top;
+//   width: 40px;
+//   height: 40px;
+// }
+
+// &::after {
+//   content: '!';
+//   color: tomato;
+// }
+
+.hero__after-title {
+  // font-size: 18px;
+  // line-height: 1.67;
+  font-size: 16px;
+  line-height: 1.62;
+  color: #9da4bd;
+  // max-width: 360px;
+  max-width: 320px;
+  @include tablet {
+    font-size: 18px;
+    line-height: 1.67;
+    max-width: 360px;
+  }
+}

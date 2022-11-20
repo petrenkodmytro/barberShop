@@ -1,0 +1,14 @@
+.pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  @extend %list;
+  gap: 20px;
+  &::before {
+    content: '';
+    width: 60px;
+    height: 1px;
+    background-color: currentColor;
+  }
+}
