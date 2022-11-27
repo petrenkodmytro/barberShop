@@ -115,14 +115,22 @@
           </div>
         </div>
       </section>
-      <!-- <section class="about section">
+      <section class="about section">
         <div class="container about__container">
           <ul class="pic-list list">
             <li class="pic-list__item">
-              <img src="./img/abot-img-1.jpeg" alt="haircut" width="270" height="445" />
+              <picture>
+                <source srcset="./img/abot-img-desktop-1.jpeg 1x, ./img/abot-img-desktop-1.jpeg 2x" media="(min-width: 1200px)" />
+                <source srcset="./img/abot-img-tablet-1.jpg 1x, ./img/abot-img-tablet-1.jpg 2x" media="(min-width: 768px)" />
+                <img src="./img/abot-img-tablet-1.jpg" alt="haircut" width="330" />
+              </picture>
             </li>
             <li class="pic-list__item">
-              <img src="./img/abot-img-2.jpeg" alt="haircut" width="270" height="445" />
+              <picture>
+                <source srcset="./img/abot-img-desktop-2.jpeg 1x, ./img/abot-img-desktop-2.jpeg 2x" media="(min-width: 1200px)" />
+                <source srcset="./img/abot-img-tablet-2.jpg 1x, ./img/abot-img-tablet-2.jpg 2x" media="(min-width: 768px)" />
+                <img src="./img/abot-img-tablet-2.jpg" alt="haircut" width="330" />
+              </picture>
             </li>
           </ul>
           <div class="about__wrap">
@@ -136,7 +144,7 @@
             <button type="button" class="btn btn--color-dark">Online-booking</button>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- <section class="prices section" id="prices">
         <div class="container">
           <p class="prices-pre-title pre-title">Spend your time with the best masters</p>

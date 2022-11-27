@@ -35,7 +35,6 @@ img {
   display: block;
   height: auto;
   max-width: 100%;
-  width: 100%;
 }
 
 .footer-list, .footer > .container, .test-link, .barbers-soc-link, .soc__list, .navigation, .header__container, .check-text span, .check-text, .modal-close, .pre-title {
@@ -712,12 +711,34 @@ body {
 }
 
 .pic-list {
-  display: flex;
-  gap: 30px;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .pic-list {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .pic-list {
+    flex-direction: row;
+  }
 }
 
-.about__wrap {
-  max-width: 470px;
+.pic-list__item {
+  width: 330px;
+}
+@media screen and (min-width: 1200px) {
+  .pic-list__item {
+    width: 270px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about__wrap {
+    width: 470px;
+  }
 }
 
 .about__pre-title {
@@ -728,6 +749,12 @@ body {
 .about__title {
   color: var(--second-title-color);
   margin-bottom: 20px;
+  font-size: 28px;
+}
+@media screen and (min-width: 1200px) {
+  .about__title {
+    font-size: 42px;
+  }
 }
 
 .about__after-title {
