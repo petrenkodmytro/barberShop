@@ -13,21 +13,45 @@
   @extend %list;
 }
 .navigation__logo {
-  margin-right: 131px;
+  margin-right: 60px;
+  @include desktop {
+    margin-right: 130px;
+  }
 }
 
 .logo__icon {
   fill: #ffffff;
+
+  @include tablet {
+    fill: var(--second-title-color);
+  }
 }
 
 .menu {
   display: none;
   gap: 30px;
+
+  @include tablet {
+    display: flex;
+  }
 }
 
 .header__connect {
   margin-left: auto;
   display: none;
+
+  @include tablet {
+    display: flex;
+    gap: 20px;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    gap: 40px;
+    margin-right: 20px;
+  }
 }
 
 .menu__link,
@@ -47,12 +71,24 @@
   }
 }
 
-.connect__btn {
-  margin-left: 43px;
-}
+// .connect__btn {
+//   @include desktop {
+//     margin-left: 43px;
+//   }
+// }
 
 .menu-open {
   margin-left: auto;
+  background-color: transparent;
+  border: none;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.icon_open {
+  fill: #ffffff;
 }
 
 .mob-menu {
@@ -76,6 +112,8 @@
 .menu-close {
   margin-left: auto;
   display: block;
+  background-color: transparent;
+  border: none;
   margin-bottom: 30px;
 }
 .mob-menu-list {
@@ -116,7 +154,7 @@
 .mob-soc::before {
   position: absolute;
   left: 0;
-  content: '';
+  content: "";
   width: 60px;
   height: 1px;
   background-color: #303030;
