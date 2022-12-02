@@ -31,11 +31,11 @@
   }
 }
 
-@mixin media($size) {
-  @media screen and (min-width: $size) {
-    @content;
-  }
-}
+// @mixin media($size) {
+//   @media screen and (min-width: $size) {
+//     @content;
+//   }
+// }
 
 @mixin calc($count, $gap) {
   width: calc((100% - $gap * ($count - 1)) / $count);
