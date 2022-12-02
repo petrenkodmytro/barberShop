@@ -96,7 +96,7 @@
   padding-top: 48px;
   padding-bottom: 48px;
   > .container {
-    height: 100%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -109,7 +109,7 @@
   display: block;
   background-color: transparent;
   border: none;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .mob-menu-list {
@@ -129,7 +129,7 @@
 }
 
 .mob-connect {
-  margin-bottom: 64px;
+  margin-bottom: 30px;
 }
 
 .mob-connect__tel {
