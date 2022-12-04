@@ -8,7 +8,7 @@
 }
 
 .modal {
-  width: 500px;
+  width: 90%;
   min-height: 500px;
   background-color: #ffffff;
   border-radius: 5px;
@@ -16,12 +16,15 @@
   top: 50%;
   left: 50%;
   padding: 40px;
-  transform: translate(-50%, -50%) rotate(0);
+  transform: translate(-50%, -50%);
   transition: transform 300ms linear, border-radius 300ms linear;
+  @media screen and (min-width: 500px) {
+    width: 500px;
+  }
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) rotate(-360deg);
+  transform: translate(-50%, -50%);
   border-radius: 50%;
 }
 
@@ -208,9 +211,16 @@
   padding: 6px 22px;
   background-color: #999999;
   display: block;
+  border-radius: 20px;
   cursor: pointer;
   .filter-check:checked + & {
     background-color: #ff6c00;
     color: #ffffff;
   }
+}
+
+.btn-send {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }

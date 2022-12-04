@@ -24,6 +24,7 @@ ol {
 }
 
 button {
+  display: block;
   cursor: pointer;
 }
 
@@ -173,7 +174,7 @@ body {
 }
 
 .modal {
-  width: 500px;
+  width: 90%;
   min-height: 500px;
   background-color: #ffffff;
   border-radius: 5px;
@@ -181,12 +182,17 @@ body {
   top: 50%;
   left: 50%;
   padding: 40px;
-  transform: translate(-50%, -50%) rotate(0);
+  transform: translate(-50%, -50%);
   transition: transform 300ms linear, border-radius 300ms linear;
+}
+@media screen and (min-width: 500px) {
+  .modal {
+    width: 500px;
+  }
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) rotate(-360deg);
+  transform: translate(-50%, -50%);
   border-radius: 50%;
 }
 
@@ -390,11 +396,18 @@ body {
   padding: 6px 22px;
   background-color: #999999;
   display: block;
+  border-radius: 20px;
   cursor: pointer;
 }
 .filter-check:checked + .filter-text {
   background-color: #ff6c00;
   color: #ffffff;
+}
+
+.btn-send {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header {
@@ -740,6 +753,10 @@ body {
     width: 470px;
   }
 }
+.about__wrap > .btn {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .about__pre-title {
   color: #303030;
@@ -871,7 +888,13 @@ body {
 
 .benefits-container {
   display: flex;
-  padding-left: 100px;
+  flex-direction: column-reverse;
+}
+@media screen and (min-width: 1200px) {
+  .benefits-container {
+    padding-left: 100px;
+    flex-direction: row;
+  }
 }
 
 .benefits-wrap {
@@ -881,16 +904,43 @@ body {
 
 .benefits-list {
   display: flex;
-  width: 370px;
   flex-wrap: wrap;
-  margin-right: 130px;
+  margin-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  .benefits-list {
+    margin-left: auto;
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .benefits-list {
+    margin-right: 130px;
+    width: 370px;
+    margin-top: 0;
+  }
 }
 
 .benefits-item {
-  width: 170px;
+  width: 150px;
   height: 133px;
   padding: 20px 24px;
   background-color: #f7f7f7;
+}
+@media screen and (min-width: 440px) {
+  .benefits-item {
+    width: 190px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .benefits-item {
+    width: 210px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .benefits-item {
+    width: 170px;
+  }
 }
 .benefits-item:nth-child(odd) {
   margin-right: 30px;

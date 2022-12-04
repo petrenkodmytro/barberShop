@@ -29,6 +29,10 @@
   @include desktop {
     width: 470px;
   }
+  & > .btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .about__pre-title {
