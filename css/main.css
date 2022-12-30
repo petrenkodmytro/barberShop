@@ -1176,7 +1176,7 @@ body {
   margin: 0 auto;
 }
 @media screen and (min-width: 1200px) {
-  .contact-wrap > .container {
+  .contact-wrap {
     display: flex;
     justify-content: space-between;
   }

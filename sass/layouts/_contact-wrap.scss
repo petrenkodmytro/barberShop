@@ -6,10 +6,9 @@
   // background-size: calc(50% - 15px) 100%;
   max-width: 1600px;
   margin: 0 auto;
-  > .container {
-    @include desktop {
-      display: flex;
-      justify-content: space-between;
-    }
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
   }
 }
