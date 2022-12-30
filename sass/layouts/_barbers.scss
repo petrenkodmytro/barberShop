@@ -98,7 +98,7 @@
   transition: background-color 200ms linear, fill 200ms linear;
   &:hover,
   &:focus {
-    background-color:var(--second-btn-color);
+    background-color: var(--second-btn-color);
     fill: var(--accent-color);
   }
 }
