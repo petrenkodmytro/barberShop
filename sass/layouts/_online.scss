@@ -1,5 +1,7 @@
 .online {
-  width: calc(100% / 2 - 15px);
+  @include desktop {
+    width: calc(100% / 2 - 15px);
+  }
 }
 
 .online-title {
@@ -39,10 +41,18 @@
 }
 
 .online-input {
-  width: 270px;
+  width: 100%;
   height: 24px;
 
   padding-bottom: 8px;
+
+  @include tablet {
+    width: 330px;
+  }
+
+  @include desktop {
+    width: 270px;
+  }
 }
 
 .online-textarea {
@@ -53,4 +63,9 @@
 
 .online-btn {
   color: var(--main-btn-color);
+  margin-left: auto;
+  margin-right: auto;
+  @include tablet {
+    margin-left: 0;
+  }
 }

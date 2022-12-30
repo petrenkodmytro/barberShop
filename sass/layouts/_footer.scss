@@ -13,13 +13,14 @@
   letter-spacing: 0.2em;
   color: #9da4bd;
 }
+
 .footer-list {
   @extend %list;
 
   margin-left: auto;
   gap: 40px;
   &::before {
-    content: '';
+    content: "";
     width: 60px;
     height: 1px;
     background-color: #303030;

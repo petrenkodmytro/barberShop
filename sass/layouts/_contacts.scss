@@ -1,16 +1,41 @@
 .contacts {
-  width: calc(50% - 15px);
-  padding-left: 100px;
+  background-image: url(../img/contact/contact-bg-mobile-min.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include retina {
+    background-image: url(../img/contact/contact-bg-mobile-2x-min.png);
+  }
+  @include tablet {
+    background-image: url(../img/contact/contact-bg-tablet-min.png);
+    @include retina {
+      background-image: url(../img/contact/contact-bg-tablet-2x-min.png);
+    }
+  }
+  // background-size: calc(50% - 15px) 100%;
+  @include desktop {
+    width: calc(50% - 15px);
+    padding-left: 100px;
+    background-image: url(../img/contact/contact-bg-desktop-min.png);
+    @include retina {
+      background-image: url(../img/contact/contact-bg-desktop-2x-min.png);
+    }
+  }
 }
 
 .contacts-title {
   color: var(--main-title-color);
   margin-bottom: 40px;
+  text-align: center;
+  @include tablet {
+    text-align: left;
+  }
 }
 
 .contacts-address {
   margin-bottom: 70px;
 }
+
 .contacts-map-link {
   font-weight: 700;
   font-size: 18px;
@@ -25,6 +50,7 @@
 .contacts-item:not(:last-child) {
   margin-bottom: 20px;
 }
+
 .contacts-link {
   font-size: 18px;
   line-height: 1.67;
@@ -37,12 +63,18 @@
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
-  /* identical to box height */
-
   text-transform: uppercase;
-
   color: #ffffff;
+  @extend %list;
+  gap: 20px;
+  &::before {
+    content: "";
+    width: 60px;
+    height: 1px;
+    background-color:currentColor;
+  }
 }
+
 .contacts-schedule {
   font-size: 18px;
   line-height: 1.67;

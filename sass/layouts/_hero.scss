@@ -29,7 +29,7 @@
   @extend %list;
   gap: 40px;
   &::before {
-    content: '';
+    content: "";
     width: 60px;
     height: 1px;
     background-color: #303030;
@@ -80,8 +80,9 @@
   color: rgba(157, 164, 189, 0.6);
   margin-bottom: 20px;
 }
+
 .hero__title {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   // font-size: 72px;
   // line-height: calc(85 / 72);
